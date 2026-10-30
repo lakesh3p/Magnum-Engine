@@ -1,0 +1,17 @@
+#Folders
+
+build/
+build-Release/
+Saved/
+Projects/
+.vs/
+out/
+bin/
+obj/
+CMakeCache.txt
+CMakeFiles/
+*.user
+
+#Batch files
+
+build.bat

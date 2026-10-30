@@ -1,0 +1,6 @@
+add_executable(MagnumTests main.cpp ${CMAKE_SOURCE_DIR}/editor/src/PluginHost.cpp ${CMAKE_SOURCE_DIR}/editor/src/commands/SpawnKinds.cpp)
+target_include_directories(MagnumTests PRIVATE ${CMAKE_SOURCE_DIR}/editor/src)
+target_link_libraries(MagnumTests PRIVATE magnum_core imgui sol2 lua54)
+target_compile_definitions(MagnumTests PRIVATE MAGNUM_ENGINE_DIR="${CMAKE_SOURCE_DIR}" MAGNUM_PROJECT_DIR="${CMAKE_SOURCE_DIR}/Projects/MagnumDemo" MAGNUM_BUILD_DIR="${CMAKE_BINARY_DIR}")
+magnum_target_defaults(MagnumTests)
+add_test(NAME MagnumTests COMMAND MagnumTests)
